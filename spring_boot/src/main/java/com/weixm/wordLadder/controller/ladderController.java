@@ -9,6 +9,7 @@ import java.util.ArrayList;
 @RestController
 @CrossOrigin("http://localhost:8081")
 public class ladderController {
+    private wordLadder ladder = new wordLadder();
 
     @RequestMapping(value = "/generate", method = RequestMethod.POST, produces = "application/json;charset=UTF-8")
     @ResponseBody
@@ -46,8 +47,7 @@ public class ladderController {
         String word2 = input.substring(start2, end2);
         System.out.println(word1);
         System.out.println(word2);
-        wordLadder ladder = new wordLadder();
-        ArrayList<String> res = ladder.generateChain(word1, word2);
+        ArrayList<String> res = this.ladder.generateChain(word1, word2);
         return res;
     }
 
@@ -71,8 +71,7 @@ public class ladderController {
         }
         String word1 = input.substring(start1, end1);
         System.out.println(word1);
-        wordLadder ladder = new wordLadder();
-        if (ladder.validWord(word1)){
+        if (this.ladder.validWord(word1)){
             return 1;
         } else {
             return 0;

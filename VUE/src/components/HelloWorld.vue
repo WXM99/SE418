@@ -2,7 +2,8 @@
   <div class="hello">
     <Row>
       <Col span="8" offset="8">
-        <Card>
+        <Card style="margin-top: 100px">
+          <img src="../assets/wordLadder.png">
           <Row>
     <Input v-model="first_word" @on-change="validator1" @on-blur="check">
       <span slot="prepend">&nbsp;&nbsp;1st word</span>
@@ -46,7 +47,7 @@ export default {
       valid1: false,
       valid2: false,
       valid: false,
-      chain: null,
+      chain: '',
       dispaly: false
     }
   },
@@ -57,6 +58,7 @@ export default {
   },
   methods: {
     generate: function () {
+      this.$Spin.show()
       this.$axios({
         method: 'post',
         url: 'http://localhost:9090/generate',
@@ -64,8 +66,9 @@ export default {
       }).then(response => {
         console.log(response.data)
         this.chain = response.data
+        this.$Spin.hide()
+        this.dispaly = true
       })
-      this.dispaly = true
     },
     validator1: function () {
       this.input1 = false
@@ -116,4 +119,7 @@ li {
 a {
   color: #42b983;
 }
+  .hello{
+    height: 100%;
+  }
 </style>
