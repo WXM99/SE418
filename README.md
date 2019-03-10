@@ -16,7 +16,7 @@ npm run dev
 
 On localhost:8080
 
-Details on [spring_boot](./spring_boot/HELP.md)
+Details on [Vue](./VUE/README.md)
 
 ## Back-end Build Setup
 
@@ -33,8 +33,7 @@ On localhost:9090
 ```bash
 cd ./spring_boot
 
-./test.bat
+./mvnw clean test
 ```
 
-Details on [Vue](./VUE/README.md)
-
+Details on [spring_boot](./spring_boot/HELP.md)
