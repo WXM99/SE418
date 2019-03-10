@@ -53,7 +53,7 @@ public class ladderController {
 
     @RequestMapping(value = "/validate", method = RequestMethod.POST, produces = "application/json;charset=UTF-8")
     @ResponseBody
-    public int validWord(@RequestBody String input) {
+    public String validWord(@RequestBody String input) {
         System.out.println(input);
         int start1=0;
         int end1=0;
@@ -72,9 +72,9 @@ public class ladderController {
         String word1 = input.substring(start1, end1);
         System.out.println(word1);
         if (this.ladder.validWord(word1)){
-            return 1;
+            return "1";
         } else {
-            return 0;
+            return "0";
         }
     }
 }

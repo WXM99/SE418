@@ -94,7 +94,7 @@ public class wordLadder {
                 }
             }
         }
-        return null;
+        return new ArrayList<>();
     }
 
     public ArrayList<String> wholeDictionary () {

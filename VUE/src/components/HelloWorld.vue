@@ -47,7 +47,7 @@ export default {
       valid1: false,
       valid2: false,
       valid: false,
-      chain: '',
+      chain: null,
       dispaly: false
     }
   },
