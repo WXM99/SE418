@@ -1,6 +1,6 @@
 # Word Ladder
 
-> project1 for course SE418
+> Project1 for course SE418
 >
 > 516015910018 weixm
 
@@ -16,6 +16,8 @@ npm run dev
 
 On localhost:8080
 
+Details on [spring_boot](./spring_boot/HELP.md)
+
 ## Back-end Build Setup
 
 ```bash
@@ -29,8 +31,10 @@ On localhost:9090
 ## Back-end Unit Test
 
 ```bash
-chmod 777 ./test.bat
+cd ./spring_boot
 
 ./test.bat
 ```
+
+Details on [Vue](./VUE/README.md)
 
