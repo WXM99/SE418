@@ -3,6 +3,8 @@
 > Project1 for course SE418
 >
 > 516015910018 weixm
+>
+> visit the project at http://101.132.73.215:8080/ (personal server) 
 
 ## Front-end Build Setup
 
