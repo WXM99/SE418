@@ -18,6 +18,9 @@ Except for some well-package widgets, the whole page is organized as a single fi
 ![image-20190331215826456](./analysis.assets/image-20190331215826456.png)
 (all the information a recived as a single json from a single api) 
 
+![image-20190331234801771](./analysis.assets/image-20190331234801771.png)
+the poor api :( 
+
 This kind of organization obviously violates the principle of **modularization** in modern software engineering.
 
 ### 2. Performance loss
@@ -39,11 +42,52 @@ In the index.html itself, a mount of helper function also defined without commen
 
 ### 4. Comparison
 
+```javascript
+  API:{
+    explore: {
+      get_home_data: '"/api/explore/"',
+      get_gallery_data: '"/api/explore/gallery/"',
+      get_gallery_more_data: '"/api/explore/gallery/more_cards/"',
+      get_collection_data: '"/api/explore/collection/"',
+      get_recent_data: '"/api/explore/get_recent/"',
+      get_product: '"/api/explore/product/"',
+      post_collect: '"/api/explore/post_collect/"',
+      delete_product: '"/api/explore/product/delete/"',
+      cancel_collect: '"/api/explore/product/cancel_collect/"',
+      post_search :'"/api/explore/post_search/"'
+    },
+    workflow: {
+      push_match_event: '"/api/workflow/push_match_event"',
+      post_picture: '"/api/workflow/post_picture/"',
+      post_text: '"/api/workflow/post_text/"',
+      confirm_style: '"/api/workflow/confirm_style/"',
+      store_passage:'"/api/workflow/store_passage/"',
+      finished_work: '"/api/workflow/finished_work/"',
+      confirm_store: '"/api/workflow/confirm_store/"',
+      download_picture: '"/api/workflow/download_picture/"',
+    },
+    user: {
+      post_register: '"/api/user/register/"',
+      login: '"/api/user/login/"',
+      auth: '"/api/user/authenticate/"'
+    },
+    deepLearning: {
+      get_embedding: '"/learning/embedding/"'
+    }
+  }
+```
 
+APIs in a VUE project.
+
+![image-20190331234621907](./analysis.assets/image-20190331234621907.png)
+
+A modular VUE project. 
 
 ### 5. Optimizations
 
-
+- Separate the whole page into functionally dependent parts.
+- Write those parts in different files and provide apis for each one.
+- Implement the methodology of modern software engineering -- decoupling and cohesion
 
 
 
@@ -78,11 +122,19 @@ The names of files and directory are still cofusing. e.g. "dbcylj" is "底部常
 
 ### 3. Comparison
 
-![image-20190331233044226](/Users/Miao/Projects/Github/SE418/hw2/analysis.assets/image-20190331233044226.png)
+![image-20190331233044226](./analysis.assets/image-20190331233044226.png)
 
+A well-organized project's front-end directory of the writter.
 
+![image-20190331233925140](./analysis.assets/image-20190331233925140.png)
+
+Coding with eslint.
 
 ### 4. Optimizations
+
+- Using a good framework and follow it's defination of directories strictly.
+- Pick a good programming specification and follow it when developing.
+- Add a .eslintrc.js file to the project to constrain the code style.
 
 ## III. About the Framework
 
@@ -106,9 +158,18 @@ About how good the Modal (M) and Controller (C) is used in the project is packag
 
 ### 3. Comparison
 
+![image-20190331234925603](./analysis.assets/image-20190331234925603.png)
+
+Part of a php MVC project, making each part a single widgets using the template mechanism.
+
+![image-20190331235150204](./analysis.assets/image-20190331235150204.png)
+
+Clean script inside. 
+
 ### 4. Optimizations
 
-
+- Decoupling pages into functionally dependent widgets.
+- Pick a modern font-end framework and make a good use of it.
 
 ## IV. About the Deployment
 
