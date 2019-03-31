@@ -8,18 +8,19 @@
 
 Obviously., the code organization in this project did not achieve **decoupling and cohesion**. 
 
-Except for some well-package widgets, the whole page is organized as a single file with a single long main function to init everything and a  single api to receive every information.
+Except for some thrid-party and well-package widgets, the whole page is organized as a single file with a single long main function to init everything, and a single api to receive every information.
 
 ![image-20190331220110484](./analysis.assets/image-20190331220110484.png)
-(put every thing in a single Main object and init them altogerther in the begining)
+(put every thing in a single Main object and init them altogerther at the begining)
 
 
 
 ![image-20190331215826456](./analysis.assets/image-20190331215826456.png)
-(all the information a recived as a single json from a single api) 
+(all the information recived as a single json from a single api) 
 
 ![image-20190331234801771](./analysis.assets/image-20190331234801771.png)
-the poor api :( 
+
+(the poor api) 
 
 This kind of organization obviously violates the principle of **modularization** in modern software engineering.
 
