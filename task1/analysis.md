@@ -1,4 +1,4 @@
-# Analysis of SJTU loading page
+# Analysis of SJTU homepage
 
 > *From the perspective of front-end*
 
