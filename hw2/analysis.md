@@ -195,7 +195,18 @@ The 'lib' file jQuery is richer but downloaded faster than the self-written traf
 
 ### 3. Comparison
 
+![image-20190331235547346](./analysis.assets/image-20190331235547346.png)
+
+A well-deployed project using webpack. Condense the file in a single line.
+
+![image-20190331235842602](./analysis.assets/image-20190331235842602.png)
+
+Shrink the file size.
+
 ### 4. Optimizations
+
+- Using webpack to deploy.
+- Delete developing files.
 
 ## V. About Resource Allocation
 
