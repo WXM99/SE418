@@ -30,13 +30,13 @@ As a certain result of the bad organization, performance loss is caused by the n
 
 ![image-20190331232438688](./analysis.assets/image-20190331232438688.png)
 
-(Performance analysis proves it)
+(Performance analysis to proves it)
 
 ### 3. Suffering in maintenance
 
-When checking the main.js where the Main object is defined, a mess of javascript code is shown. The defination of the Main object is upto **326 lines**. Each part of the inner code is also hard to read for it's Irregular indentation and poor comments.
+When checking the main.js where the Main object is defined, a mess of javascript code is shown. The defination of the Main object is upto **326 lines**. Each part of the inner code is also hard to read for it's irregular indentation and poor comments.
 
-In the index.html itself, a mount of helper function also defined without comments and perpose. Raw operations to strings fill thoes functions, making it much more difficlut to maintain this project.
+In the index.html itself, a mount of helper function also defined without comments and perpose. Raw operations to strings fill in thoes functions, making it much more difficlut to maintain this project.
 
 ![image-20190331221805815](./analysis.assets/image-20190331221805815.png)
 (Ugly helper funtion in index.html)
@@ -98,11 +98,9 @@ A modular VUE project.
 
 ![image-20190331222016879](./analysis.assets/image-20190331222016879.png)
 
-As is shown above, the directory structure of this project is a kind of messy. But the wrose is that the almost dupilcated directories appeared twice, causing unnecessary files transported in the network. So, the directory of this project is not clean and clear enough.
+As is shown above, the directory structure of this project is a kind of messy. But the wrose are the dupilcated directories' appearings , causing unnecessary files transported in the network. So, the directory of this project is not clean and clear enough.
 
 ![image-20190331222527578](./analysis.assets/image-20190331222527578.png)
-
- 
 
 ### 2. Programming specification
 
@@ -125,7 +123,7 @@ The names of files and directory are still cofusing. e.g. "dbcylj" is "底部常
 
 ![image-20190331233044226](./analysis.assets/image-20190331233044226.png)
 
-A well-organized project's front-end directory of the writter.
+A well-organized project's front-end directory.
 
 ![image-20190331233925140](./analysis.assets/image-20190331233925140.png)
 
@@ -141,9 +139,9 @@ Coding with eslint.
 
 ### 1. MVC + Template rendering
 
-It's for sure that no front-end frameworks are took part in. But it can be infered that the project   used a MVC framework with template rendering funtion. 
+It's for sure that no front-end frameworks were taken part in. But it can be infered that the project used a MVC framework with template rendering mechanism. 
 
-The evidence is the "dbcylj" directory. The index.html file here jest contains the bottom bar.
+The evidence is the "dbcylj" directory. The index.html file here just contains the bottom bar.
 
 ![image-20190331223902345](./analysis.assets/image-20190331223902345.png)
 (dbcylj/index.html)
@@ -151,11 +149,9 @@ The evidence is the "dbcylj" directory. The index.html file here jest contains t
 ![image-20190331223943082](./analysis.assets/image-20190331223943082.png)
 (the bottom bar)
 
-Some php traces are also detected. So the MVC frame may be "laravel".
-
 ### 2. Make the best use of it?
 
-About how good the Modal (M) and Controller (C) is used in the project is packaged in the back-end and invisible. But as for the View (V). The project didn't make the beat use. Because except for the poorly wirtten 'dbcylj' part in the bottom. No any other widgets are packaged and shown in the directory. It makes the template renderding almost useless.
+About how good the Modal (M) and Controller (C) is used in the project is packaged in the back-end and invisible. But as for the View (V). The project didn't make the best use. Because except for the poorly wirtten 'dbcylj' part in the bottom. No any other widgets are packaged and shown in the directory. It makes the template renderding almost useless.
 
 ### 3. Comparison
 
@@ -165,7 +161,7 @@ Part of a php MVC project, making each part a single widgets using the template 
 
 ![image-20190331235150204](./analysis.assets/image-20190331235150204.png)
 
-Clean script inside. 
+Clear script inside. 
 
 ### 4. Optimizations
 
@@ -180,7 +176,7 @@ Clean script inside.
 
 (a fully exposed directory)
 
-Thanks to its shortcoming in deployment, The whole directory is totally exposed and just lay there to be analysis :). This is due to the absence of **webpack**. No optimization and compression was made when deploying. In other words, It looks more like a dev (developing) branch in the test server than a finished project.
+Thanks to its shortcoming in deployment, The whole directory is totally exposed and just lay there to be analysis. This is due to the absence of **webpack**. No optimization and compression was made when deploying. In other words, It looks more like a dev (developing) branch in the test server than a finished project.
 
 ### 2. Performance loss
 
@@ -252,7 +248,7 @@ language setting in a php project.
 ### 5. Optimizations
 
 - Using localization function to provide multi-language website.
-- Render in the back-end in low visiting site to optimize performance. 
+- Rendering in the back-end in a low visitings site to optimize performance. 
 
 ## VI. Advantages
 
