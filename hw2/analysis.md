@@ -244,17 +244,32 @@ Considering the visit of this page is not so large. Maybe part of the rendering 
 
 ### 4. Comparison
 
+![image-20190401000016838](./analysis.assets/image-20190401000016838.png)
+
+language setting in a php project.
+
 ### 5. Optimizations
+
+- Using localization function to provide multi-language website.
+- Render in the back-end in low visiting site to optimize performance. 
 
 ## VI. Advantages
 
 -  Unified UI concept
+
 -  Adequate information
+
 -  Low memory footprint
 
-![image-20190331232125232](./analysis.assets/image-20190331232125232.png)
+  ![image-20190331232125232](./analysis.assets/image-20190331232125232.png)
 
-
+- Secure certificate
+  ![image-20190401001233890](./analysis.assets/image-20190401001233890.png)
 
 ## VII. Conclusion
 
+The most failed part of this front-end project is the poorly designed structure. It reflects on the chaotic directories and the long and integrated funtions. But after all, it met all the demands of customers and run pretty well facing a normal visitor.
+
+However, as a developer, such kind of project can not be praised to much because of the difficulty to maintain and the waste of resource.
+
+Front-end development does not require a high threshold that almost everyone can pick it up easily. But it doesn't mean that writting a good front-end is a easy task. In fact, any kind of development is not easy. During the development, a good developer will surely **practice thoes methodologies of software engineering** at all levels of development . That is also what distinguishes a good engineer from coding machines.
