@@ -38,4 +38,3 @@ cd ./spring_boot
 ./mvnw clean test
 ```
 
-Details on [spring_boot](./spring_boot/HELP.md)

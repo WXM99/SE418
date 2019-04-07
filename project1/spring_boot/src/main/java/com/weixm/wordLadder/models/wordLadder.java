@@ -44,7 +44,7 @@ public class wordLadder {
     }
 
     // neighbors means the word that only differs one letter from the given word
-    public ArrayList<String> neighbers(String word) {
+    private ArrayList<String> neighbers(String word) {
         String alp = "abcdefghijklmnopqrstuvwxyz";
         int len = word.length();
         ArrayList<String> neighbors = new ArrayList<>();

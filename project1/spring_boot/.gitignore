@@ -1,5 +1,7 @@
-HELP.md
-/target/
+!target
+/target/*
+### Test Report ###
+!target/site/
 !.mvn/wrapper/maven-wrapper.jar
 
 ### STS ###

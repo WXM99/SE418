@@ -14,6 +14,7 @@ import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
+import java.lang.reflect.Method;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -42,8 +43,10 @@ public class WordLadderApplicationTests {
 		Assert.assertEquals("\"code\" shall be in the dictionary.", shall_in, true);
 	}
 	@Test
-	public void neighborsTest() {
-		ArrayList<String> neighbors = this.ladder.neighbers("code");
+	public void neighborsTest() throws Exception {
+		Method get_neighbors = wordLadder.class.getDeclaredMethod("neighbers", String.class);
+		get_neighbors.setAccessible(true);
+		ArrayList<String> neighbors = (ArrayList<String>) get_neighbors.invoke(this.ladder, "code");
 		Assert.assertNotEquals("neighbors of \"code\" is not empty", neighbors.size(), 0);
 	}
 	@Test
