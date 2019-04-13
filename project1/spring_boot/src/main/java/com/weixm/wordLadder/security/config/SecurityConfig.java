@@ -32,7 +32,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 /* Init a user in memory */
                 .inMemoryAuthentication()
                 .passwordEncoder(new BCryptPasswordEncoder())
-                .withUser("admin").password(new BCryptPasswordEncoder().encode("SE418")).roles("ADMIN");
+                .withUser("admin")
+                .password(new BCryptPasswordEncoder().encode("SE418")).roles("ADMIN");
     }
 
     @Override
