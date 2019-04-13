@@ -25,7 +25,7 @@ public class ladderController {
                 break;
             }
         }
-        for (int i = start1; i < input.length(); i++){
+        for (int i = start1+1; i < input.length(); i++){
             if (input.charAt(i) == '"') {
                 end1 = i;
                 break;
@@ -37,14 +37,14 @@ public class ladderController {
                 break;
             }
         }
-        for (int i = start2; i < input.length(); i++){
+        for (int i = start2+1; i < input.length(); i++){
             if (input.charAt(i) == '"') {
                 end2 = i;
                 break;
             }
         }
-        String word1 = input.substring(start1, end1);
-        String word2 = input.substring(start2, end2);
+        String word1 = input.substring(start1+1, end1);
+        String word2 = input.substring(start2+1, end2);
         System.out.println(word1);
         System.out.println(word2);
         ArrayList<String> res = this.ladder.generateChain(word1, word2);
@@ -63,13 +63,13 @@ public class ladderController {
                 break;
             }
         }
-        for (int i = start1; i < input.length(); i++){
+        for (int i = start1+1; i < input.length(); i++){
             if (input.charAt(i) == '"') {
                 end1 = i;
                 break;
             }
         }
-        String word1 = input.substring(start1, end1);
+        String word1 = input.substring(start1+1, end1);
         System.out.println(word1);
         if (this.ladder.validWord(word1)){
             return "1";

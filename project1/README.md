@@ -90,3 +90,34 @@ public void neighborsTest() throws Exception {
 #### Add 2 Release Versions of Git Workflow
 
 ![image-20190407214528887](./README.assets/image-20190407214528887.png)
+
+### Homework3 @4.12
+
+#### Gitworkflow — add dev branch
+
+#### MockMVC test
+
+in ```./src/test/.../wordLadderControllerTest.java```
+
+#### Security + Actuator
+
+- Set authorization to /actuator/** apis in security.config
+
+  ```java
+  .authorizeRequests()
+  /* Public APIs for every user */
+  .antMatchers("/login", "/generate", "/validate").permitAll()
+  /* Security protected APIs for ADMIN*/
+  .antMatchers("/actuator/**").hasRole("ADMIN")
+  ```
+
+- Init  an administrator in memory  in security.config
+
+  ```java
+  .inMemoryAuthentication()
+  .passwordEncoder(new BCryptPasswordEncoder())
+  .withUser("admin")
+  .password(new BCryptPasswordEncoder().encode("SE418")).roles("ADMIN");
+  ```
+
+- Test for Security & Actuator with ```MockMvc``` and ```MockSession``` 
