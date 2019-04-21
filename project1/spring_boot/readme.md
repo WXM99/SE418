@@ -83,4 +83,3 @@ in ```./src/test/.../wordLadderControllerTest.java```
   ```
 
 - Test for Security & Actuator with ```MockMvc``` and ```MockSession``` 
-
