@@ -25,6 +25,7 @@ public class ladderController {
     @ResponseBody
     public String validWord(@RequestBody JSONObject input) {
         String word1 = (String) input.get("word1");
+        System.out.println(word1);
         if (this.ladder.validWord(word1)){
             return "1";
         } else {
