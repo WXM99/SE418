@@ -22,8 +22,8 @@
             <span v-if="!valid2 && !input2">invalid input</span>
             <span v-if="valid2 && !input2" style="color: #65b55c">okay!</span>
           </Row>
-    <Button type="primary" v-if="!(this.valid)" disabled @click="generate" style="font-size: 20px">Generate</Button>
-    <Button type="primary" v-if="this.valid" @click="generate" style="font-size: 20px">Generate</Button>
+    <Button type="primary" v-if="!(this.valid1 && valid2)" disabled @click="generate" style="font-size: 20px">Generate</Button>
+    <Button type="primary" v-if="this.valid1 && valid2" @click="generate" style="font-size: 20px">Generate</Button>
           <div v-if="dispaly" style="margin-top: 20px">
             <div v-if="this.chain === null">No ladder between {{this.first_word}}&{{this.second_word}}</div>
             <div v-else style="color: #fff; font-weight: bold">{{this.chain}}</div>
@@ -40,8 +40,8 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      first_word: null,
-      second_word: null,
+      first_word: '',
+      second_word: '',
       input1: true,
       input2: true,
       valid1: false,
@@ -75,7 +75,7 @@ export default {
       this.$axios({
         method: 'post',
         url: 'http://localhost:9090/validate',
-        data: {word: this.first_word}
+        data: {word1: this.first_word}
       }).then(response => {
         this.valid1 = response.data === 1
       })
@@ -85,7 +85,7 @@ export default {
       this.$axios({
         method: 'post',
         url: 'http://localhost:9090/validate',
-        data: {word: this.second_word}
+        data: {word1: this.second_word}
       }).then(response => {
         this.valid2 = response.data === 1
       })
