@@ -80,7 +80,7 @@ visit apis in ```localhost:9090``` (reflect when docker run -p 9090[outer]:9090[
   });
   ```
 
-## 4. Dockerfile
+## Dockerfile
 
 ```dockerfile
 FROM java:8
