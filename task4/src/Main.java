@@ -30,10 +30,10 @@ public class Main {
         Integer running_sec = 5;
         Thread.sleep(running_sec*1000);
         multiThreadServices.shutdownNow();
-        Thread.sleep(1000);
+        Thread.sleep(500);
         System.out.println("--------Report--------");
-        System.out.println("Total req:   " + totalReq);
-        System.out.println("Served req:  " + servedReq);
-        System.out.println("Dropped req: " + failedReq);
+        System.out.println("Total req:         " + totalReq);
+        System.out.println("Served req:        " + servedReq);
+        System.out.println("Dropped req:       " + failedReq);
     }
 }

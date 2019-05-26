@@ -9,10 +9,10 @@ public class Producer implements Runnable{
     private AtomicInteger servedNum;
     private AtomicInteger failedNum;
     private LinkedBlockingDeque<myReq> servings;
-    public static final int SERV_RANGE = 5;
+    public static final int SERV_RANGE = 50;
     public static final int TIMEOUT = 1000;
-    public static final int REST = 2000;
-    public static final int SWITCH_FIFO = 50;
+    public static final int REST = 1000;
+    public static final int SWITCH_FIFO = 40;
 
     public Producer(
             AtomicInteger tmpReq,
@@ -60,7 +60,6 @@ public class Producer implements Runnable{
                             myReq request = this.servings.getFirst();
                             if(request.size <= this.tmpReq.get())
                             {
-                                System.out.println("request "+ request.size + " has " + this.tmpReq.get() );
                                 this.tmpReq.updateAndGet(x -> (x - request.size));
                                 this.servings.remove(request);
                                 this.servedNum.incrementAndGet();

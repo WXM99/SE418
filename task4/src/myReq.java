@@ -5,7 +5,7 @@ import java.util.Random;
 public class myReq implements Serializable {
     public Integer size;
     public Long timestamp;
-    public static final int MAXSIZE = 5;
+    public static final int MAXSIZE = 50;
 
     public myReq() {
         Random randSize = new Random();
