@@ -21,11 +21,11 @@ public class Consumer implements Runnable {
             while (true) {
                 if(this.reqQue.offerLast(new myReq(),TIMEOUT, TimeUnit.MILLISECONDS))
                 {
-                    System.out.println();
+                    System.out.println("Consumer-" + this.consumerID + ": pushed a req.");
                     this.reqNum.incrementAndGet();
                 }
                 else{
-                    System.out.println("Consumer-" + this.consumerID + ": pushed a req.");
+                    System.out.println("Consumer-" + this.consumerID + ": failed a req.");
                 }
                 Thread.sleep(REQ_CYCLE);
             }
