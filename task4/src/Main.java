@@ -19,14 +19,19 @@ public class Main {
         Producer p1 = new Producer(tmpReq, servedReq, failedReq, myContainer);
         Producer p2 = new Producer(tmpReq, servedReq, failedReq, myContainer);
         Producer p3 = new Producer(tmpReq, servedReq, failedReq, myContainer);
+        Producer p4 = new Producer(tmpReq, servedReq, failedReq, myContainer);
+        Producer p5 = new Producer(tmpReq, servedReq, failedReq, myContainer);
 
         ExecutorService multiThreadServices = Executors.newCachedThreadPool();
         multiThreadServices.execute(p1);
         multiThreadServices.execute(p2);
         multiThreadServices.execute(p3);
+        multiThreadServices.execute(p4);
+        multiThreadServices.execute(p5);
         multiThreadServices.execute(c1);
         multiThreadServices.execute(c2);
-        multiThreadServices.execute(c3);
+        // multiThreadServices.execute(c3);
+
         Integer running_sec = 5;
         Thread.sleep(running_sec*1000);
         multiThreadServices.shutdownNow();
